@@ -19,7 +19,6 @@ def news():
     r = requests.get(
         'https://newsapi.org/v2/top-headlines?country=no',
         params=params)
-    # return render_template('movies.html', movies=json.loads(r.text)['movies'])
     return json.loads(r.text)
 
 
@@ -31,7 +30,6 @@ def weather():
     r = requests.get(
         'https://api.openweathermap.org/data/2.5/weather?q=Stavanger,no',
         params=params)
-    # return render_template('movies.html', movies=json.loads(r.text)['movies'])
     return json.loads(r.text)
 
 
@@ -43,7 +41,6 @@ def football():
     r = requests.get(
         'https://api.football-data.org/v2/matches',
         params=params)
-    # return render_template('movies.html', movies=json.loads(r.text)['movies'])
     return json.loads(r.text)
 
 
